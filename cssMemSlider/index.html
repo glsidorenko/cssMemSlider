@@ -4,26 +4,47 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="./style.css">
   <title>CSS Mem Slider</title>
 </head>
 <body>
   <div class="container">
     <div class="slider">
-
-      <div class="image">
-        <img src="/rock.gif" alt="There should be a meme here">
+      <div class="slider-elements">
+        <div class="slider-element">
+          <img src="/cssMemSlider/rock.gif" alt="There should be a meme here">
+        </div>
+        <div class="slider-element">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--1-min-min.jpg" alt="There should be a meme here">
+        </div>
+        <div class="slider-element">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--2-min-min.jpg" alt="There should be a meme here">
+        </div>
+        <div class="slider-element">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--5-min-min.jpg">
+        </div>
       </div>
-      
       <p class="slider-desciption">desciption</p>
       <div class="slider-controls">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+        <label>
+          <input class="dot" type="radio" name="radio" value="0">
+          <div></div>
+        </label>
+        <label>
+          <input class="dot" type="radio" name="radio" value="1">
+          <div></div>
+        </label>
+        <label>
+          <input class="dot" type="radio" name="radio" value="2">
+          <div></div>
+        </label>
+        <label>
+          <input class="dot" type="radio" name="radio" value="3">
+          <div></div>
+        </label>
       </div>
-
     </div>
   </div>
+  <script src="./script.js"></script>
 </body>
 </html>
