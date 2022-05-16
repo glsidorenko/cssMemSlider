@@ -7,7 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const dots = slider.querySelectorAll('.dot');
   const descr = document.querySelector('.slider-desciption');
 
-  const phrazes = ['Hmm, nice ...', '2', '3', '4'];
+  const phrazes = ['Hmm, what to choose...', 
+                  'Funny cat', 
+                  'Another cute cat', 
+                  'Do everything on time'];
 
   let number = Math.floor(Math.random() * (4))
 
@@ -19,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     dot.addEventListener('click', (event) => {
       let slideNumber = event.target.value;
       console.log(event.target);
-      changeSlide(slideNumber);
-      changeDescription(slideNumber);
+        changeSlide(slideNumber);
+        changeDescription(slideNumber);
     });
   })
 
