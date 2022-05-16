@@ -14,10 +14,10 @@ html {
   font-size: 62.5%;
 }
 
-/* body {
+body {
   height: 100vh;
   width: 100%;
-} */
+}
 
 img {
   width: 100%;
@@ -26,8 +26,8 @@ img {
 }
 
 .container {
-  height: 100vh;
   width: 100vw;
+  height: 100%;
   background-color: rgb(53, 53, 53);
 }
 
