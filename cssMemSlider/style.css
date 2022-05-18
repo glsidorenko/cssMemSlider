@@ -1,0 +1,148 @@
+:root {
+  box-sizing: border-box;
+}
+  
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  color: black;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: gray;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  max-width: 56rem;
+  height: 64rem;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 40rem 11rem;
+  padding: 3rem;
+}
+
+input[name="dot"] {
+  visibility: hidden;
+}
+
+#radio1:checked ~ #buttons #label1 div,
+#radio2:checked ~ #buttons #label2 div,
+#radio3:checked ~ #buttons #label3 div,
+#radio4:checked ~ #buttons #label4 div{
+  background-color: inherit;
+  border: 0.1rem solid rgb(0, 0, 0);
+}
+
+#radio1:checked ~ #slide1,
+#radio2:checked ~ #slide2,
+#radio3:checked ~ #slide3,
+#radio4:checked ~ #slide4 {
+  opacity: 1;
+}
+
+.slide {
+  font-size: 1.5rem;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s, visibility 1s;
+  opacity: 0;
+  grid-row: 1/3;
+  grid-column: 1/3;
+}
+
+.slide__img {
+  width: 100%;
+  height: 100%;
+}
+
+.slide__text {
+  width: 60%;
+  font-size: 1.6rem;
+  color: rgb(0, 0, 0);
+  padding-top: 2.3rem;
+  background-color: rgb(255, 255, 255);
+  text-align: start;
+}
+
+.buttons {
+  display: flex;
+  grid-row: 4/5;
+  grid-column: 2/3; 
+  /* justify-self: flex-end; */
+  /* z-index: 1; */
+  gap: 2rem;
+}
+
+.buttons__button {
+  padding: 0.9rem;
+  border-radius: 50%;
+}
+
+.buttons__button div {
+  display: block;
+  content: "";
+  background-color: rgb(70, 131, 229);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+
+.buttons__button:hover div {
+  background-color: rgb(255, 0, 208);
+  border: 0.1rem solid rgb(255, 0, 208);
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
+
+/* @media (max-width: 481px) {
+  .slider {
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 49.5rem 14.5rem;
+    padding: 0 3%;
+  }
+
+  .slide__img {
+    width: 42rem;
+    height: 46.5rem;
+  }
+
+  .buttons {
+    grid-column: 1/3;
+    justify-self: center;
+    padding-top: 2rem;
+  }
+
+  .slide__text {
+    width: 100%;
+    padding-top: 5.7rem;
+  }
+} */
